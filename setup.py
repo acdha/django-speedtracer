@@ -4,7 +4,7 @@ setup(
     name='django-speedtracer',
     version='0.1',
     license='BSD',
-    description="Profile your Django request processing using Google Chrome's SpeedTracer",
+    description="Profile your Django site using Google Chrome's SpeedTracer",
     author='Chris Adams',
     author_email='chris@improbable.org',
     url='http://github.com/acdha/django-speedtracer',
