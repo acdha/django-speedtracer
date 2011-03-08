@@ -172,7 +172,7 @@ class SpeedTracerMiddleware(object):
                     'range': self._build_range(start_time, end_time),
                     'operation':  {
                         'type':  'HTTP',
-                        'label':  "{0.method} {0.path}".format(request)
+                        'label':  "%s %s" % (request.method, request.path)
                     },
                     'children': self.traces,
                 }
