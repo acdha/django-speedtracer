@@ -1,10 +1,12 @@
 from distutils.core import setup
+import os
 
 setup(
     name='django-speedtracer',
     version='0.1',
     license='BSD',
     description="Profile your Django site using Google Chrome's SpeedTracer",
+    long_description=open(os.path.join(os.path.dirname(__file__), "README.rst")).read(),
     author='Chris Adams',
     author_email='chris@improbable.org',
     url='http://github.com/acdha/django-speedtracer',
