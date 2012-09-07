@@ -10,6 +10,8 @@ setup(
     author='Chris Adams',
     author_email='chris@improbable.org',
     url='http://github.com/acdha/django-speedtracer',
+    include_package_data=True,
+    zip_safe=False,
     packages=[
         'speedtracer',
     ],
