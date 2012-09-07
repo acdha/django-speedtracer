@@ -9,7 +9,7 @@ import sys
 
 from django.conf import settings
 from django.core.cache import cache
-from django.http import HttpResponse
+from django.http import Http404, HttpResponse
 from django.utils import simplejson
 
 
@@ -138,6 +138,9 @@ class SpeedTracerMiddleware(object):
             return
 
     def process_request(self, request):
+        if request.path.endswith("symbolmanifest.json"):
+            raise Http404
+
         if not request.path.startswith(self.TRACE_URL):
             request._speedtracer_start_time = time.time()
             sys.settrace(self.trace_callback)
